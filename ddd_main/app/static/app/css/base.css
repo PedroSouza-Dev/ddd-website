@@ -1,0 +1,182 @@
+:root {
+    ---ddd-main-blue: #0E0B86;
+    ---ddd-white: #ffffff;
+    ---highlighted: #00FFFF;
+    ---font-family-base: 'Spline Sans', sans-serif;
+    ---font-family-title: 'Black Han Sans', sans-serif;
+}
+
+html {
+    width: 100%;
+    height: 100;
+    position: absolute;
+}
+
+.global-header {
+    position: relative;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color:var(---ddd-white);
+}
+
+/* Define largura para as três primeiras divs 
+.global-header .logo,
+.global-header .main-title,
+.global-header .social-shares {
+    width: calc(33.333% - 10px); Ajuste conforme necessário 
+}*/
+
+.main-title {
+    height: 130px;
+    width: 680px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0.8;
+    /*margin-bottom: 75px;*/
+}
+
+.main-title p {
+    position: relative;
+    font-family: var(---font-family-base);
+    margin-bottom: 0;
+    top: 10px;
+    right: 328px;
+}
+
+.main-title h1 {
+    font-size: 100px;
+    font-family: var(---font-family-title);
+    text-align: center;
+    width: 100%;
+    margin-top: 0;
+}
+
+.social-shares.header p {
+    font-family: var(---font-family-base);
+    color: var(---ddd-main-blue);
+    margin-bottom: 0;
+}
+
+.global-header.logo {
+    margin-right: 40px;
+}
+
+.global-header.logo img {
+    max-height: 200px;
+    max-width: 180px;
+}
+
+.global-header.social-shares {
+    margin-left: 40px;
+}
+
+
+.youtube-social {
+    position: relative;
+    top:5px;
+}
+
+/* Coloca a quarta div abaixo das três primeiras */
+.global-header .main-nav {
+    height: 40px;
+    width: 100%;
+    margin-top: 10px; /* Adiciona um espaço entre as linhas */
+    background-color: var(---ddd-main-blue);
+    margin: 0;
+}
+
+
+.global-footer{
+    height: 300px;
+    width: 100%;
+    background-color: var(---ddd-main-blue);
+}
+
+/*smaller pc screems*/
+@media (max-width: 1370px) {
+    .main-title h1 {
+        font-size: 70px;
+        font-family: var(---font-family-title);
+        text-align: center;
+        width: 100%;
+        margin-top: 0;
+    }
+    .main-title p {
+        position: relative;
+        font-family: var(---font-family-base);
+        margin-bottom: 0;
+        top: 10px;
+        right: 220px;
+    }
+    
+}
+
+/*tablet styles*/
+@media (max-width: 1096px) {
+    .main-title h1 {
+        font-size: 50px;
+    }
+    .main-title p {
+        top: 8px;
+        right: 150px;
+    }
+}
+
+@media (max-width: 931px) {
+    .main-title p {
+        left: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .global-header .logo {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0;
+    }
+
+    .global-header .logo img {
+        height: 120px;
+        width: 150px;
+    }
+
+    .main-title h1 {
+        position: relative;
+        top: -50px;
+    }
+    .main-title p {
+        position: relative;
+        top: -50px;
+    }
+
+    .follow-us {
+        display: none;
+    }
+
+    .global-header .social-shares.header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; 
+    }
+
+    .global-header .social-shares.header a img.instagram-social {
+        width: 40px; 
+        height: auto;
+    }
+
+    .global-header .social-shares.header a img.facebook-social {
+        width: 40px;  
+        height: auto; 
+    }
+
+    .global-header .social-shares.header a img.youtube-social {
+        width: 45px;  
+        height: auto; 
+        position: relative;
+        right: 2px;
+    }
+}
